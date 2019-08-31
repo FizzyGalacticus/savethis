@@ -1,0 +1,39 @@
+{
+    "name": "@fizzygalacticus/savethis",
+    "version": "1.0.0",
+    "description": "Save the result of anything!",
+    "main": "index.js",
+    "repository": "https://github.com/FizzyGalacticus/savethis",
+    "author": "Dustin L. Dodson",
+    "license": "MIT",
+    "scripts": {
+        "test": "mocha tests",
+        "lint": "eslint ."
+    },
+    "keywords": [
+        "save",
+        "result",
+        "helper",
+        "debug"
+    ],
+    "dependencies": {
+        "@fizzygalacticus/colored-fancy-log": "^1.0.0",
+        "@fizzygalacticus/promise-or-not": "^1.0.3"
+    },
+    "devDependencies": {
+        "assert": "^2.0.0",
+        "eslint": "^6.3.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "husky": "^3.0.4",
+        "mocha": "^6.2.0",
+        "prettier": "^1.18.2"
+    },
+    "eslintIgnore": [
+        "**/node_modules"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint && npm run test"
+        }
+    }
+}
